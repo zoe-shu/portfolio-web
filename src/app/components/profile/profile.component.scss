@@ -2,21 +2,40 @@
   height: 100vh;
   max-height: -webkit-fill-available;
   display: table;
-  .name{
-    font-family: 'VT323';
-    font-size: 75px;
-    text-shadow: 3px 1px #e4bdbd;
-    padding-bottom: 2px;
-    padding-right: 2px;
-    text-transform: uppercase;
+  .name-wrap{
+    padding-right: 0px;
+    padding-bottom: 0px;
+    .name{
+      width:300px;
+      &.with-shadow{
+        display: block;
+      }
+      &.no-shadow{
+        display: none;
+      }
+    }
     &:hover{
-      text-shadow: none;
-      margin-left:2px;
-      margin-top: 2px;
-      padding-bottom: 0px;
-      padding-right: 0px;
+      margin-left:-10px;
+      margin-top: -10px;
+      padding-right: 10px;
+      padding-bottom: 10px;
+      .name.no-shadow{
+        display: block;
+      }
+      .name.with-shadow{
+        display: none;
+      }
     }
   }
+  .introduction{
+    margin-top: 20px;
+    li{
+      list-style: none;
+      &:before{
+        content: '_';
+      }
+    }
+  } 
   .work-item-wrap{
     .chat-bubble{
       box-shadow: 1px 1px black;
@@ -79,14 +98,15 @@
 
 @media only screen and (max-width: 500px) {
   .profile-section {
-    //temp
     .introduction {
       li{
         line-height: 24px;
         margin-bottom: 10px;
       }
+      .sub-intro{
+        line-height: 24px;
+      }
     }
-    //temp end
     .work-item{
       width:25px;
       height:25px;
@@ -100,17 +120,18 @@
 @media only screen and (max-width: 370px) {
   .profile-section{
     .name{
-      font-size: 60px;
+      // font-size: 60px;
+      width:250px;
     }
-
-    //temp
     .introduction {
       li{
         line-height: 20px;
         margin-bottom: 5px;
       }
+      .sub-intro{
+        line-height: 20px;
+      }
     }
-    //temp end
   }
 }
 

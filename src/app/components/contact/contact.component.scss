@@ -1,7 +1,10 @@
 .contact-section{
+  float: right;
+  margin-top: -100px;
+  cursor: pointer;
   &:hover{
-    margin-left: 2px;
-    margin-top: 2px;
+    margin-right: -3px;
+    margin-top: -97px;
     box-shadow: none;
   }
 }
