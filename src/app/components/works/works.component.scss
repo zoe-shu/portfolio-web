@@ -1,0 +1,119 @@
+
+::ng-deep{
+  // video::-webkit-media-controls-panel {
+  //   background-image: linear-gradient(transparent, transparent) !important;
+  // }
+  .carousel {
+    outline: 0;
+    height:100%;
+  }
+
+  .carousel-inner{
+    height:100%;
+  }
+
+  .carousel-item{
+    height: 100vh;
+    max-height: -webkit-fill-available;
+    text-align: center;
+    height:100%;
+    img{
+      height: 100vh;
+      max-height: -webkit-fill-available;
+    }
+  }
+
+  .carousel-item.active {
+    border: none;
+  }
+
+  .carousel-control-prev, .carousel-control-next{
+    width:auto;
+  }
+
+  .carousel-control-prev {
+    left: -1%;
+  }
+
+  .carousel-control-next {
+    right: -1%;
+  }
+
+  .carousel-caption{
+    background:rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    bottom: auto;
+    top: 55px;
+    left: 3%;
+    right: 3%;
+    text-shadow: 2px 2px 4px #905d00;
+    p{
+      margin-bottom:0;
+    }
+  }
+
+  .carousel-indicators{
+    margin-bottom:0;
+  }
+
+  .embed-responsive{
+    height: 100%;
+  }
+
+  .embed-responsive-item:focus {
+    outline: 0;
+  }
+
+  .embed-responsive .embed-responsive-item, 
+  .embed-responsive iframe, 
+  .embed-responsive embed, 
+  .embed-responsive object, 
+  .embed-responsive video {
+    left: 3%;
+    width: 94%;
+    height: 100%;
+  }
+
+  .carousel-caption{
+    left: 3%;
+    right: 3%;
+    p{
+      font-size: 15px;
+    }
+  }
+
+
+  @media only screen and (max-width: 500px) {
+    .embed-responsive .embed-responsive-item, 
+    .embed-responsive iframe, 
+    .embed-responsive embed, 
+    .embed-responsive object, 
+    .embed-responsive video {
+      left: 10%;
+      width: 80%;
+    }
+    .carousel-caption{
+      left: 10%;
+      right: 10%;
+      h3{
+        font-size: 22px;
+      }
+      p{
+        line-height: 20px;
+      }
+    }
+    .carousel-item{
+      img{
+        max-height: 85%;
+        margin-top: 20%;
+      }
+    }
+  
+  }
+
+  @media only screen and (max-width: 320px) {
+    .carousel-caption h3 {
+      font-size: 20px;
+    }
+  }
+}

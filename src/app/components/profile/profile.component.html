@@ -1,0 +1,35 @@
+<div class="profile-section section-container orange-bg">
+
+  <div class="h-100 d-flex flex-column justify-content-between">
+    <div class="profile-wrap w-100">
+      <div class="name purple ">
+        This is Zoe
+      </div>
+      <div class="introduction white-7 font-VT323 font-xl text-left">
+        <ul class="pl-3 list-square">
+          <li>I've been Web Developer for 4 years</li>
+          <li>Created over 30 websites.</li>
+          <li>Love to learn new things about programming</li>
+          <li>Love to build interesting website</li>
+          <li>This is my portfolio</li>
+          <li>Picked some interesting and interactive projects to share with you all</li>
+          <li><h4 class="purple d-inline font-VT323">Enjoy!</h4> </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-4 w-100 work-item-wrap d-flex justify-content-between position-relative">
+      <div class="chat-bubble">
+        <span class="orange font-VT323">Click Me</span>
+        <span class="rotate-15 d-inline-block orange ml-1">!</span>
+      </div>
+      <div class="work-item purple-bg purple" [class]="'item-'+d" *ngFor="let dot of dotList; let d = index;" (click)="onClickDot(dot)" >
+      </div>
+    </div>
+  </div>
+
+  <app-contact #contactComponent ></app-contact>
+
+  <app-works #worksComponent ></app-works>
+
+</div>

@@ -1,0 +1,48 @@
+<div class="contact-section position-fixed p-2">
+  <div class="contact skill-set mb-2">
+    <i class="fas fa-code orange font-xl" (click)="openSkillSet()"></i>
+  </div>
+  <div class="contact email mb-2">
+    <a href="mailto://zoe.shu.wm@gmail.com">
+      <i class="fas fa-envelope orange font-xl"></i>
+    </a>
+  </div>
+  <div class="contact linkedin">
+    <a href="https://www.linkedin.com/in/zoe-shu/" target="_blank">
+      <i class="fab fa-linkedin orange font-xl"></i>
+    </a>
+  </div>
+</div>
+
+<div class="skill-set-section orange-bg " [class.show-window]="isOpenSkillSet" [class.hide-window]="!isOpenSkillSet">
+  <div class="close-btn purple font-xl px-3" (click)="closeSkillSet()">&#10006;</div>
+  <div class="row mx-0 h-100 align-items-center">
+    <div class="row mx-0 w-100">
+      <ul class="programming-skill col-6 purple font-VT323 font-xl">
+        <h4 class="text-underline">Programming Languages</h4>
+        <li>Node.js(Express)</li>
+        <li>Vue.js</li>
+        <li>Angular.js</li>
+        <li>PHP (Framework: Symfony, Laravel)</li>
+        <li>HTML5</li>
+        <li>CSS3, SCSS, Sass, less</li>
+        <li>JavaScript</li>
+      </ul>
+      
+      <ul class="other-skill col-6 purple font-VT323 font-xl">
+        <h4 class="text-underline">Other Skill</h4>
+        <li>Bootstrap</li>
+        <li>MySQL</li>
+        <li>Tensorflow.js</li>
+        <li>AWS</li>
+        <li>Aliyun</li>
+        <li>DigitalOcean</li>
+        <li>WeChat api</li>
+        <li>Facebook api</li>
+        <li>Google Analytics</li>
+        <li>Baidu Analytics</li>
+        <li>Git</li>
+      </ul>
+    </div>
+  </div>
+</div>
