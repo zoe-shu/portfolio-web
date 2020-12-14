@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { Inject, InjectionToken, NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
@@ -10,7 +10,11 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { WorksComponent } from './components/works/works.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {environment} from './../environments/environment';
 
+export const EnvironmentToken = new InjectionToken('ENVIRONMENT');
+
+declare let gtag: Function;
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,10 +32,14 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     NgbModule,
   ],
   providers: [
-    
+    { provide: EnvironmentToken, useValue: environment }
   ],
   bootstrap: [
     AppComponent
   ]
 })
-export class AppModule { }
+export class AppModule { 
+  constructor(@Inject(EnvironmentToken) private env: any) {
+    gtag('config', this.env.google.GA_TRACKING_ID);
+  }
+}
