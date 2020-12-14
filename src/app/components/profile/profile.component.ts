@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+declare let gtag: Function;
 
 @Component({
   selector: 'app-profile',
@@ -29,11 +30,10 @@ export class ProfileComponent implements OnInit {
     ];
   }
 
-  onClickDot(itemId){
-    console.log(itemId);
-    
+  onClickDot(itemId){    
     this.worksComponent.selectItem(itemId);
     this.worksComponent.showSlide();
+    gtag('send', 'view_item', itemId);
   }
 
 }
