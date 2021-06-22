@@ -31,8 +31,11 @@
         <span class="orange font-custom font-l text-uppercase">Click Me</span>
         <span class="rotate-15 d-inline-block orange ml-1">!</span>
       </div>
-      <div class="work-item purple-bg purple" [class]="'item-'+d" *ngFor="let dot of dotList; let d = index;" (click)="onClickDot(dot)" >
-      </div>
+      <ng-container *ngIf="dotList">
+        <div class="work-item purple-bg purple" [class]="'item-'+d" *ngFor="let dot of dotList; let d = index;" (click)="onClickDot(dot)" >
+        </div>
+      </ng-container>
+
     </div>
   </div>
 

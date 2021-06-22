@@ -46,3 +46,4 @@ testem.log
 Thumbs.db
 http-config.png
 https-config.png
+ssl/*

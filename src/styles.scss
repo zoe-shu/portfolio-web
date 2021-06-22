@@ -12,10 +12,15 @@
 // $purple: rgb(81, 95, 217);
 $purple: #575cae;
 $orange: #ff6d41;
+$yt-red: #ed462f;
+$white-7: rgba(255,255,255,0.7);
 
 :root {
   --black: #555;
   --active-blue: #073769;
+  --white-7: rgba(255,255,255,0.7);
+  --yt-red: #ed462f
+
 }
 
 html{
@@ -43,7 +48,7 @@ body {
   color:black;
 }
 .white-7{
-  color: rgba(255,255,255,0.7);
+  color: var(--white-7);
 }
 .purple{
   color: $purple;
@@ -57,6 +62,14 @@ body {
 }
 .orange-bg{
   background: $orange;
+}
+.yt-red{
+  color: var(--yt-red);
+  &.yt-bg{
+    background: rgba(255,255,255,0.8);
+    border-radius: 5px;
+    padding: 0px 7px;
+  }
 }
 .font-xs{
   font-size: 12px;

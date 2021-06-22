@@ -1,0 +1,18 @@
+<div class="wrapper d-flex justify-content-around align-items-center">
+  <div class="dish">
+    <ng-container *ngIf="meatArray && meatArray.length > 0">
+      <div class="meat" *ngFor="let meat of meatArray; let i = index;"
+        (click)="onClickMeat(i)" [class.flipped]="meatArray[i]?.isFlipped"
+      >
+        <div class="meat-layer front"></div>
+        <div class="meat-layer back"></div>
+      </div>
+    </ng-container>
+    <div class="dish-after"></div>
+  </div>
+
+  <div class="grill-machine">
+    <div class="web layer-1"></div>
+    <div class="web layer-2"></div>
+  </div>
+</div>

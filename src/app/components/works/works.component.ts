@@ -15,7 +15,7 @@ export class WorksComponent implements OnInit {
   constructor(config: NgbCarouselConfig) {
     // customize default values of carousels used by this component tree
     config.interval = 1000;
-    config.wrap = false;
+    config.wrap = true; //loop
     config.animation = false;
   }
 

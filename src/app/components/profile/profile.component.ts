@@ -33,7 +33,7 @@ export class ProfileComponent implements OnInit {
   onClickDot(itemId){    
     this.worksComponent.selectItem(itemId);
     this.worksComponent.showSlide();
-    gtag('send', 'view_item', itemId);
+    // gtag('send', 'view_item', itemId);
   }
 
 }
