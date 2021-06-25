@@ -1,0 +1,86 @@
+<div class="slide-content-wrap row mx-0 justify-content-center align-items-center px-5">
+  <div class="custom-caption col-12 white-7">
+    <p>
+      Technology: CSS Animation (Leaf motions), Required to shake the device to trigger next step
+    </p>
+    <a class="font-xl d-block mt-2 ml-2" 
+        href="https://www.youtube.com/embed/ljhP9tZMa1s" target="_blank" >
+      Watch demo on <app-youtube-icon></app-youtube-icon>
+    </a>
+  </div>
+
+  <div class="col-12 col-md-6 mt-4">
+    <button (click)="requestPlay()" class="btn d-block mx-auto">
+      Play
+    </button>
+    <div class="body-div" [class.background-center]="isBodyCenter">
+      <div class="leaf-wrap">
+        <img class="leaf l-2 slow "
+          [class]="{ 'move': isMove, 'animate': isAnimated }"  
+          src="../../assets/img/vita/leaf2/leaf2.png" />
+        <img class="leaf l-1 mid "
+          [class]="{ 'move': isMove, 'animate': isAnimated }"  
+          src="../../assets/img/vita/leaf2/leaf1.png" />
+        <img class="leaf l-4 slow " 
+          [class]="{ 'move': isMove, 'animate': isAnimated }" 
+          src="../../assets/img/vita/leaf2/leaf4.png" />
+        <img class="leaf l-3 mid " 
+          [class]="{ 'move': isMove, 'animate': isAnimated }" 
+          src="../../assets/img/vita/leaf2/leaf3.png" />
+        <img class="leaf l-13 fast " 
+          [class]="{ 'move': isMove, 'animate': isAnimated }" 
+          src="../../assets/img/vita/leaf2/leaf8.png" />
+        <img class="leaf l-14 slow " 
+          [class]="{ 'move': isMove, 'animate': isAnimated }" 
+          src="../../assets/img/vita/leaf2/leaf4.png" />
+        <img class="leaf l-12 mid " 
+          [class]="{ 'move': isMove, 'animate': isAnimated }" 
+          src="../../assets/img/vita/leaf2/leaf10.png" />
+        <img class="leaf l-11 mid " 
+          [class]="{ 'move': isMove, 'animate': isAnimated }" 
+          src="../../assets/img/vita/leaf2/leaf2.png" />
+        <img class="leaf l-10 mid " 
+          [class]="{ 'move': isMove, 'animate': isAnimated }" 
+          src="../../assets/img/vita/leaf2/leaf10.png" />
+        <img class="leaf l-8 slow " 
+          [class]="{ 'move': isMove, 'animate': isAnimated }" 
+          src="../../assets/img/vita/leaf2/leaf8.png" />
+        <img class="leaf l-6 slow " 
+          [class]="{ 'move': isMove, 'animate': isAnimated }" 
+          src="../../assets/img/vita/leaf2/leaf6.png" />
+        <img class="leaf l-5 fast " 
+          [class]="{ 'move': isMove, 'animate': isAnimated }" 
+          src="../../assets/img/vita/leaf2/leaf5.png" />
+        <img class="leaf l-9 fast " 
+          [class]="{ 'move': isMove, 'animate': isAnimated }" 
+          src="../../assets/img/vita/leaf2/leaf9.png" />
+        <img class="leaf l-7 fast" 
+          [class]="{ 'move': isMove, 'animate': isAnimated }" 
+          src="../../assets/img/vita/leaf2/leaf7.png" />
+      </div>
+      <img class="s-item head1" 
+        [class.opacity-0]="firstOpacity" 
+        src="../../assets/img/vita/lrec_super/super1.png" />
+      <img class="s-item head2" 
+        [class.opacity-100]="secondOpacity"
+        src="../../assets/img/vita/lrec_super/super2.png" />
+
+      <div class="s-item c-btn-wrap">
+        <img class="c-btn" 
+          src="../../assets/img/vita/lrec_super/button.png" />
+        <div class="c-btn-flash" 
+        [class]="{'opacity-100': secondOpacity, 'flash': isFlash }">
+        </div>
+      </div>
+
+      <a class="c-link" [class.d-block]="isDisplayLink" 
+        id="coupon-link" target="_blank"></a>
+    </div>
+  </div>
+
+  <div class="col-12 col-md-6 mt-4">
+    <img src="../../assets/img/vita_ad_cover.jpg" >
+  </div>
+
+</div>
+

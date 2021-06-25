@@ -1,153 +1,27 @@
 <div class="slide-wrap orange-bg" [class.show-window]="isShowSlide" [class.hide-window]="!isShowSlide">
   <div class="close-btn purple font-xl px-3" (click)="onClickClose()">&#10006;</div>
-  <ngb-carousel #itemSlide>
-    <ng-template ngbSlide id="prudential_mov">
-      <div class="slide-content-wrap row mx-0 justify-content-center align-items-center px-5">
+  <ngb-carousel #itemSlide *ngIf="workContent">
+    <ng-template ngbSlide *ngFor="let content of workContent; let index = i" [id]="content.id">
+      <div class="slide-content-wrap row mx-0 justify-content-center align-items-center px-4">
         <div class="custom-caption col-12 white-7">
-          <p>Technology: Use RasperryPi to collect user riding data from the bicycle ;<br>
-            text animation match with the background video
+          <p [innerHtml]="content.description">
+            
           </p>
-          <a class="font-xl d-block mt-2 ml-2" href="https://www.youtube.com/embed/34wAUmQ41mw" target="_blank" >
-            Watch demo on <span class="yt-red yt-bg">YouTube<i class="fab fa-youtube ml-1"></i></span>
+          <a *ngIf="content.isYoutube" class="font-xl d-block mt-2 ml-2" 
+              [href]="content.url" target="_blank" >
+            Watch demo on <app-youtube-icon></app-youtube-icon>
           </a>
         </div>
-        <div class="col-12 col-md-6 mt-4">
-          <img src="../../assets/img/prudential-venue.jpg" >
-        </div>
-        <div class="col-12 col-md-6 mt-4">
-          <img src="../../assets/img/prudential-board.jpg" >
-        </div>
-        <div class="col-12 col-md-6 mt-4">
-          <img src="../../assets/img/prudential-share.jpg" >
-        </div>
-      </div>
-    </ng-template>
-
-    <ng-template ngbSlide id="lancome-firework-mov">
-      <div class="slide-content-wrap row mx-0 justify-content-center align-items-center px-5">
-        <div class="custom-caption col-12 white-7">
-          <p>Technology: CSS Animation ; Communicate with LED control system ; Queue up to play animation if multi player</p>
-          <a class="font-xl d-block mt-2 ml-2" href="https://www.youtube.com/embed/Ev1n3d0U71c" target="_blank" >
-            Watch demo on <span class="yt-red yt-bg">YouTube<i class="fab fa-youtube ml-1"></i></span>
-          </a>
-        </div>
-        <div class="col-12 col-md-6 mt-4">
-          <img src="../../assets/img/lancome_firework.jpg" >
-        </div>
-        <div class="col-12 col-md-6 mt-4">
-          <img src="../../assets/img/lancome_firework_venue.png" >
-        </div>
-      </div>
-    </ng-template>
-
-    <ng-template ngbSlide id="lancome-fridge-mov">
-      <div class="slide-content-wrap row mx-0 justify-content-center align-items-center px-5">
-        <div class="custom-caption col-12 white-7">
-          <p>Technology: CCS Animation match with the background video ; Virtual Keyboard ; Color tunning for transparent screen</p>
-          <a class="font-xl d-block mt-2 ml-2" href="https://www.youtube.com/embed/1akgwQbqAAg" target="_blank" >
-            Watch demo on <span class="yt-red yt-bg">YouTube<i class="fab fa-youtube ml-1"></i></span>
-          </a>
-        </div>
-        <div class="col-12 col-md-6 mt-4">
-          <img src="../../assets/img/lancome_fridge_play.jpg" >
-        </div>
-        <div class="col-12 col-md-6 mt-4">
-          <img src="../../assets/img/lancome_fridge.jpg" >
-        </div>
-      </div>
-    </ng-template>
-
-    <ng-template ngbSlide id="ifc-xmas-mov">
-      <div class="slide-content-wrap row mx-0 justify-content-center align-items-center px-5">
-        <div class="custom-caption col-12 white-7">
-          <p>Technology: Using Tensorflow.js to identify the e-postcard graphic, for player to send the e-postcard by email.</p>
-          <a class="font-xl d-block mt-2 ml-2" href="https://www.youtube.com/embed/p3zdIQqmEgE" target="_blank" >
-            Watch demo on <span class="yt-red yt-bg">YouTube<i class="fab fa-youtube ml-1"></i></span>
-          </a>
-        </div>
-        <div class="col-12 col-md-6 mt-4">
-          <img src="../../assets/img/ifc_xmas.png" >
-        </div>
-      </div>
-    </ng-template>
-
-    <ng-template ngbSlide id="ifc-xmas-send-mov">
-      <div class="slide-content-wrap row mx-0 justify-content-center align-items-center px-5">
-        <div class="custom-caption col-12 white-7">
-          <p>Technology: CSS Animation ; Virtual Keyboard ; Use RasperryPi to turn on the light after e-postcard sent</p>
-          <a class="font-xl d-block mt-2 ml-2" href="https://www.youtube.com/embed/bB15gm98gHM" target="_blank" >
-            Watch demo on <span class="yt-red yt-bg">YouTube<i class="fab fa-youtube ml-1"></i></span>
-          </a>
-        </div>
-        <div class="col-12 col-md-6 mt-4">
-          <img src="../../assets/img/ifc_xmas.png" >
-        </div>
-      </div>
-    </ng-template>
-
-    <ng-template ngbSlide id="shiseido-billboard-mov">
-      <div class="slide-content-wrap row mx-0 justify-content-center align-items-center px-5">
-        <div class="custom-caption col-12 white-7">
-          <p>Technology: Neon style frame & text, spotlight animation</p>
-          <a class="font-xl d-block mt-2 ml-2" href="https://www.youtube.com/embed/QBzS9IlVdrA" target="_blank" >
-            Watch demo on <span class="yt-red yt-bg">YouTube<i class="fab fa-youtube ml-1"></i></span>
-          </a>
-        </div>
-        <div class="col-12 col-md-6 mt-4">
-          <img src="../../assets/img/shiseido_billboard.jpg" >
-        </div>
-      </div>
-    </ng-template>
-
-    <ng-template ngbSlide id="hennessy-mov">
-      <div class="slide-content-wrap row mx-0 justify-content-center align-items-center px-5">
-        <div class="custom-caption col-12 white-7">
-          <p>Technology: CSS Animation (coin flipping, zoom in to specific zone, random item)</p>
-          <a class="font-xl d-block mt-2 ml-2" href="https://www.youtube.com/embed/wGHLBvfJvoQ" target="_blank" >
-            Watch demo on <span class="yt-red yt-bg">YouTube<i class="fab fa-youtube ml-1"></i></span>
-          </a>
-        </div>
-        <div class="col-12 col-md-6 mt-4">
-          <img src="../../assets/img/hennessy_play.png" >
-        </div>
-      </div>
-    </ng-template>
-
-    <ng-template ngbSlide id="hennessy-write-img">
-      <div class="slide-content-wrap row mx-0 justify-content-center align-items-center px-5">
-        <div class="custom-caption col-12 white-7">
-          <p>After user got the item from wishing pool, they can write an e-postcard with the blessing message from the item.</p>
-        </div>
-        <div class="col-12 col-md-6 mt-4">
-          <img src="../../assets/img/hennessy_write.png" >
-        </div>
-      </div>
-    </ng-template>
-
-    <ng-template ngbSlide id="hennessy-preview-img">
-      <div class="slide-content-wrap row mx-0 justify-content-center align-items-center px-5">
-        <div class="custom-caption col-12 white-7">
-          <p>Technology: Capture finished postcard, re-scalling the last element for preview</p>
-        </div>
-        <div class="col-12 col-md-6 mt-4">
-          <img src="../../assets/img/hennessy_preview.jpg" >
-        </div>
+        <ng-container *ngIf="content.images">
+          <div class="col-12 col-md-6 mt-4" *ngFor="let img of content.images">
+            <img [src]="img.src" >
+          </div>
+        </ng-container>
       </div>
     </ng-template>
 
     <ng-template ngbSlide id="vita-mov">
-      <div class="slide-content-wrap row mx-0 justify-content-center align-items-center px-5">
-        <div class="custom-caption col-12 white-7">
-          <p>Technology: CSS Animation (Leaf motions), Required to shake the device to trigger next step</p>
-          <a class="font-xl d-block mt-2 ml-2" href="https://www.youtube.com/embed/ljhP9tZMa1s" target="_blank" >
-            Watch demo on <span class="yt-red yt-bg">YouTube<i class="fab fa-youtube ml-1"></i></span>
-          </a>
-        </div>
-        <div class="col-12 col-md-6 mt-4">
-          <img src="../../assets/img/vita_ad_cover.jpg" >
-        </div>
-      </div>
+      <app-demo-vita #vitaDemoElem ></app-demo-vita>
     </ng-template>
-
   </ngb-carousel>
 </div>

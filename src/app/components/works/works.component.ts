@@ -9,8 +9,11 @@ import { NgbCarousel, NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 })
 export class WorksComponent implements OnInit {
   @ViewChild('itemSlide') itemSlide: NgbCarousel;
+  @ViewChild('vitaDemoElem') vitaDemoElem;
+  @Input() workContent: any;
 
   isShowSlide: boolean = false;
+
 
   constructor(config: NgbCarouselConfig) {
     // customize default values of carousels used by this component tree
@@ -20,12 +23,13 @@ export class WorksComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    
+
   }
 
   ngAfterViewInit() {
     this.itemSlide.pause();
   }
+
 
   public selectItem(itemId){
     this.itemSlide.select(itemId);
@@ -41,5 +45,9 @@ export class WorksComponent implements OnInit {
 
   public showSlide(){
     this.isShowSlide = true;
+  }
+
+  public playVita(){
+    this.vitaDemoElem.playAnimation();
   }
 }

@@ -12,6 +12,8 @@ import { ContactComponent } from './components/contact/contact.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {environment} from './../environments/environment';
 import { BeefGrillGameComponent } from './components/beef-grill-game/beef-grill-game.component';
+import { DemoVitaComponent } from './components/demo-vita/demo-vita.component';
+import { YoutubeIconComponent } from './components/youtube-icon/youtube-icon.component';
 
 export const EnvironmentToken = new InjectionToken('ENVIRONMENT');
 
@@ -24,6 +26,8 @@ declare let gtag: Function;
     WorksComponent,
     ContactComponent,
     BeefGrillGameComponent,
+    DemoVitaComponent,
+    YoutubeIconComponent,
   ],
   imports: [
     BrowserModule,
