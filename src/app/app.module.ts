@@ -14,6 +14,7 @@ import {environment} from './../environments/environment';
 import { BeefGrillGameComponent } from './components/beef-grill-game/beef-grill-game.component';
 import { DemoVitaComponent } from './components/demo-vita/demo-vita.component';
 import { YoutubeIconComponent } from './components/youtube-icon/youtube-icon.component';
+import { DemoLancomeFireworksComponent } from './components/demo-lancome-fireworks/demo-lancome-fireworks.component';
 
 export const EnvironmentToken = new InjectionToken('ENVIRONMENT');
 
@@ -28,6 +29,7 @@ declare let gtag: Function;
     BeefGrillGameComponent,
     DemoVitaComponent,
     YoutubeIconComponent,
+    DemoLancomeFireworksComponent,
   ],
   imports: [
     BrowserModule,

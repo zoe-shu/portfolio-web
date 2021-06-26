@@ -13,6 +13,7 @@ export class DemoVitaComponent implements OnInit {
   isFlash: boolean = true;
   isAnimated: boolean = false;
   isBodyCenter: boolean = false;
+  isDisableReplay: boolean = false;
 
   constructor() { }
 
@@ -31,9 +32,12 @@ export class DemoVitaComponent implements OnInit {
   }
 
   public playAnimation(){
-    setTimeout(() => {
-      this.initAnimation();
-    }, 1000);
+    if(!this.isDisableReplay){
+      this.isDisableReplay = true;
+      setTimeout(() => {
+        this.initAnimation();
+      }, 1000);
+    }
   }
 
   private initAnimation(){
@@ -50,6 +54,10 @@ export class DemoVitaComponent implements OnInit {
       this.isDisplayLink = true;
       this.isBodyCenter = true;
     }, 2500);
+
+    setTimeout(() => {
+      this.isDisableReplay = false;
+    }, 3000);
   }
 
   public requestPlay(){
