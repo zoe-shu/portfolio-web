@@ -1,5 +1,5 @@
-<div class="slide-wrap orange-bg" [class.show-window]="isShowSlide" [class.hide-window]="!isShowSlide">
-  <div class="close-btn purple font-xl px-3" (click)="onClickClose()">&#10006;</div>
+<div class="slide-wrap theme-bg" [class.show-window]="isShowSlide" [class.hide-window]="!isShowSlide">
+  <div class="close-btn second-color font-xl px-3" (click)="onClickClose()">&#10006;</div>
   <ngb-carousel #itemSlide *ngIf="workContent">
     <ng-template ngbSlide *ngFor="let content of workContent; let index = i" [id]="content.id">
       <div class="slide-content-wrap row mx-0 justify-content-center align-items-center px-4">

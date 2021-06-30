@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, Input, OnInit, ViewChild } from '@angular/core';
 declare let gtag: Function;
 
 @Component({
@@ -9,15 +9,18 @@ declare let gtag: Function;
 })
 export class ProfileComponent implements OnInit {
   @ViewChild('worksComponent', {static: true}) worksComponent;
-  
+  @Input() cssTheme: string;
+
+  isBBTheme: boolean;
   dotList: any;
   workContent: any;
 
   constructor(){}
 
   ngOnInit() {
+    this.isBBTheme = this.cssTheme == 'theme-blueberry' ? true : false;
     this.initWorkItem();
-    this.worksComponent.hideSlide();    
+    this.worksComponent.hideSlide();
   }
 
   onClickDot(itemId){    
@@ -65,22 +68,6 @@ export class ProfileComponent implements OnInit {
           }
         ]
       },
-      // {
-      //   id: this.dotList[1],
-      //   description: 'Technology: CSS Animation ; Communicate with LED control system ; Queue up to play animation if multi player',
-      //   url: 'https://www.youtube.com/embed/Ev1n3d0U71c',
-      //   isYoutube: true,
-      //   images: [
-      //     {
-      //       description: '',
-      //       src: '../../assets/img/lancome_firework.jpg',
-      //     },
-      //     {
-      //       description: '',
-      //       src: '../../assets/img/lancome_firework_venue.png',
-      //     }
-      //   ]
-      // },
       {
         id: this.dotList[2],
         description: 'Technology: CCS Animation match with the background video ; Virtual Keyboard ; Color tunning for transparent screen',

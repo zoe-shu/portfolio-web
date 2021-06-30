@@ -161,49 +161,26 @@ a {
 	display: block;
 	height:55%;
   margin: 0 auto;
-  /* position: relative; */
 }
 .drag-area{
-	/* width: 100%;
-	height: 100%; */
 	position: absolute;
 	margin: 0 auto;
 	display: inline-block;
 	left: 0%;
 	top: 0%;
-	// transform: translateX(-50%);
 	z-index: 1;
 }
 .draggable{
 	transform: translate(0px, 0px);
 	opacity: 1;
-	/* height:400px; */
 	display:inline-block;
 }
 
 .p2 .item{
 	display: none;
-	/* width:500%;
-	margin-left:-250%; */
-	/* height: 100%; */
 	width: auto;
-  // height:500px;
 	animation: bright 5s linear infinite, float 4s linear infinite;
 }
-.p2 .item.lantern {
-  height: 600px;
-}
-.p2 .item.pig {
-  /* height: 400px; */
-}
-.p2 .item.genifique {
-  height: 600px;
-}
-.p2 .item.lancome{
-  height: 121px;
-  margin: 40% auto;
-}
-
 .p2 .item.show{
 	display: block;
 }
@@ -348,8 +325,8 @@ html.firework .p2 .item{
 }
 
 /* item sparkler end */
-.draggable,
-.draggable * {
-  -ms-touch-action: none;
-  touch-action: none;
+
+
+.demo-col {
+  background: black;
 }

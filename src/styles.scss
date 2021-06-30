@@ -7,24 +7,63 @@
 //   src:  url('/assets/fonts/PressStart2P.ttf') format('truetype'),
 // }
 
-// $purple: #741aa0;
-// $orange: #f07530;
-// $purple: rgb(81, 95, 217);
-$purple: #575cae;
-$orange: #ff6d41;
+//Theme Color
+// $purple: #575cae;
+// $orange: #ff6d41;
+// $pink: #fe7f7f;
+// $theme-red: #ff502c;
+// $theme-yellow: #ffae13;
+
 $yt-red: #ed462f;
 $white-7: rgba(255,255,255,0.7);
 
 :root {
+  --theme-primary: #ff6d41;
+  --theme-second: #575cae;
+
+  // --theme-purple: #575cae;
+  // --theme-orange: #ff6d41;
+  // --theme-pink: #fe7f7f;
+  // --theme-red: #ff502c;
+  // --theme-yellow: #ffae13;
+
   --black: #555;
   --active-blue: #073769;
   --white-7: rgba(255,255,255,0.7);
-  --yt-red: #ed462f
+  --yt-red: #ed462f;
 
 }
 
+.home-page{
+  &.theme-blueberry {
+    --theme-primary: #575cae;
+    --theme-second: #fe7f7f;
+  }
+  &.theme-orange{
+    --theme-primary: #ff6d41;
+    --theme-second: #575cae;
+  }
+  &.theme-tomato{
+    --theme-primary: #ff502c;
+    --theme-second: #575cae;
+  }
+  &.theme-cheese{
+    --theme-primary: #ffae13;
+    --theme-second: #575cae;
+  }
+}
+
+.test-box{
+  display: block;
+  padding: 30px;
+  background-color: var(--theme-primary);
+  span{
+    color: var(--theme-second);
+  }
+}
+
 html{
-  background-color: $orange;
+  background-color: var(--theme-primary);
   max-height: 100vh;
   height: -webkit-fill-available;
   height: -moz-available;
@@ -50,18 +89,18 @@ body {
 .white-7{
   color: var(--white-7);
 }
-.purple{
-  color: $purple;
+.second-color{
+  color: var(--theme-second);
   text-shadow: 0px 0px 1px #d49d9d;
 }
-.purple-bg{
-  background-color: $purple;
+.second-color-bg{
+  background-color: var(--theme-second);
 }
-.orange{
-  color: $orange;
+.primary-color{
+  color: var(--theme-primary);
 }
-.orange-bg{
-  background: $orange;
+.theme-bg{
+  background:  var(--theme-primary);
 }
 .yt-red{
   color: var(--yt-red);
@@ -115,11 +154,11 @@ body {
 
 /* Other */
 .chat-bubble{
-  border: 2px solid $purple;
+  border: 2px solid var(--theme-second);
   display: inline-block;
   padding: 2px 7px;
   text-align: center;
-  background: $purple;
+  background: var(--theme-second);
   position: absolute;
   top: -45px;
   right: 0;
@@ -130,7 +169,7 @@ body {
     bottom: -14px;
     width: 14px;
     border: 14px solid transparent;
-    border-top-color: $purple;
+    border-top-color: var(--theme-second);
     border-bottom: 0px;
     border-right: 0px;
     left: 26px;
@@ -151,16 +190,11 @@ body {
   max-height: -webkit-fill-available;
 }
 
-.section-title{
-  font-size: 40px;
-  text-shadow: 3px 1px #e4bdbd;
-}
-
 .contact-section{
   right: 3%;
   top: 14%;
   background: white;
-  box-shadow: 2px 2px 1px $purple;
+  box-shadow: 2px 2px 1px var(--theme-second);
   text-align: center;
 }
 
@@ -204,7 +238,7 @@ body {
 }
 
 .btn{
-  border: 2px solid $purple;
+  border: 2px solid var(--theme-second);
   display: inline-block;
   padding: 2px 7px;
   text-align: center;

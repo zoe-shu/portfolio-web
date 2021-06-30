@@ -1,12 +1,14 @@
-<div class="profile-section section-container orange-bg">
+<div class="profile-section section-container theme-bg">
 
   <div class="h-100 d-flex flex-column justify-content-between">
     <div class="profile-wrap w-100">
       <div class="name-wrap">
-        <img class="name with-shadow" src="../../assets/img/web/name@3x.png" />
-        <img class="name no-shadow " src="../../assets/img/web/name_normal@3x.png" />
+        <img class="name with-shadow" *ngIf="!isBBTheme" src="../../assets/img/web/name@3x.png" />
+        <img class="name no-shadow" *ngIf="!isBBTheme" src="../../assets/img/web/name_normal@3x.png" />
+        <img class="name with-shadow" *ngIf="isBBTheme" src="../../assets/img/web/name_pink@3x.png" />
+        <img class="name no-shadow" *ngIf="isBBTheme" src="../../assets/img/web/pink_normal@3x.png" />
       </div>
-      <div class="name-text-only purple font-custom">
+      <div class="name-text-only second-color font-custom">
         This is Zoe
       </div>
       
@@ -22,17 +24,17 @@
         <div class="sub-intro">
           Picked some interesting and interactive projects to share with you all!
         </div>
-        <h4 class="purple font-custom text-uppercase">Enjoy!</h4>
+        <h4 class="second-color font-custom text-uppercase">Enjoy!</h4>
       </div>
     </div>
 
     <div class="mt-4 w-100 work-item-wrap d-flex justify-content-between position-relative">
       <div class="chat-bubble">
-        <span class="orange font-custom font-l text-uppercase">Click Me</span>
-        <span class="rotate-15 d-inline-block orange ml-1">!</span>
+        <span class="primary-color font-custom font-l text-uppercase">Click Me</span>
+        <span class="rotate-15 d-inline-block primary-color ml-1">!</span>
       </div>
       <ng-container *ngIf="dotList">
-        <div class="work-item purple-bg purple" [class]="'item-'+d" *ngFor="let dot of dotList; let d = index;" (click)="onClickDot(dot)" >
+        <div class="work-item second-color-bg second-color" [class]="'item-'+d" *ngFor="let dot of dotList; let d = index;" (click)="onClickDot(dot)" >
         </div>
       </ng-container>
 
