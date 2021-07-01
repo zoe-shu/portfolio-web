@@ -14,7 +14,7 @@
         </div>
         <ng-container *ngIf="content.images">
           <div class="col-12 col-md-6 mt-4" *ngFor="let img of content.images">
-            <img [src]="img.src" >
+            <img [class.white-border]="img.border" [src]="img.src" >
           </div>
         </ng-container>
       </div>

@@ -21,12 +21,6 @@ $white-7: rgba(255,255,255,0.7);
   --theme-primary: #ff6d41;
   --theme-second: #575cae;
 
-  // --theme-purple: #575cae;
-  // --theme-orange: #ff6d41;
-  // --theme-pink: #fe7f7f;
-  // --theme-red: #ff502c;
-  // --theme-yellow: #ffae13;
-
   --black: #555;
   --active-blue: #073769;
   --white-7: rgba(255,255,255,0.7);
@@ -149,6 +143,9 @@ body {
 }
 .rotate-15{
   transform: rotate(15deg);
+}
+.white-border{
+  border: 10px solid white;
 }
 /* Transform end */
 

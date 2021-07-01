@@ -45,7 +45,8 @@ export class ProfileComponent implements OnInit {
       'hennessy-mov',
       'hennessy-write-img',
       'hennessy-preview-img',
-      'vita-mov'
+      'vita-mov',
+      'playground'
     ];
     this.workContent = [
       {
@@ -140,6 +141,7 @@ export class ProfileComponent implements OnInit {
         images: [
           {
             description: '',
+            border: true,
             src: '../../assets/img/hennessy_play.png',
           }
         ]
@@ -168,18 +170,54 @@ export class ProfileComponent implements OnInit {
           }
         ]
       },
-      // {
-      //   id: this.dotList[9],
-      //   description: 'Technology: CSS Animation (Leaf motions), Required to shake the device to trigger next step',
-      //   url: 'https://www.youtube.com/embed/ljhP9tZMa1s',
-      //   isYoutube: true,
-      //   images: [
-      //     {
-      //       description: '',
-      //       src: '../../assets/img/vita_ad_cover.jpg',
-      //     }
-      //   ]
-      // },
+      {
+        id: this.dotList[10],
+        description: 'The UI desgin of this website. <br>Changing theme color for every visit.',
+        url: '',
+        isYoutube: false,
+        images: [
+          {
+            description: '',
+            border: true,
+            src: '../../assets/img/playground/blueberry_mobile.png',
+          },
+          {
+            description: '',
+            border: true,
+            src: '../../assets/img/playground/blueberry_desktop.png',
+          },
+          {
+            description: '',
+            border: true,
+            src: '../../assets/img/playground/orange_desktop.png',
+          },
+          {
+            description: '',
+            border: true,
+            src: '../../assets/img/playground/orange_mobile.png',
+          },
+          {
+            description: '',
+            border: true,
+            src: '../../assets/img/playground/cheese_mobile.png',
+          },
+          {
+            description: '',
+            border: true,
+            src: '../../assets/img/playground/cheese_desktop.png',
+          },
+          {
+            description: '',
+            border: true,
+            src: '../../assets/img/playground/tomato_desktop.png',
+          },
+          {
+            description: '',
+            border: true,
+            src: '../../assets/img/playground/tomato_mobile.png',
+          },
+        ]
+      },
     ];
 
   }
